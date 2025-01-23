@@ -9,6 +9,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+p {
+    line-height: calc(.5rem+2vw);
+}
 header {
     background-color: var(--color-2);
     color: var(--color-5);
@@ -32,17 +35,21 @@ header ul {
     gap: 20px;
 }
 main {
-    width: 100%;
+    min-width: 100vw;
     padding: 10px calc(5px + 2vw);
     min-height: 100vh;
     background-color: #1a1f3d;
+    font-size: clamp(.75rem,.75rem + 2vw,1.5rem);
+    max-inline-size: 66ch;
 }
 .top-icons {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
-article {
-    margin: 0px;
-    font-size: calc(1rem-1vw);
+article.introduction {
+    width: clamp(40vw,66ch,90vw);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
